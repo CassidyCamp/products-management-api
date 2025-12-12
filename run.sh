@@ -1,5 +1,3 @@
-set -a
-source .env
-set +a
+export $(grep -v '^#' .env | xargs)
 
-./.env/Scripts/python uvicorn src.main:app --host $HOST --port $PORT --reload
+./.venv/Scripts/python -m uvicorn src.main:app --host $HOST --port $PORT --reload
