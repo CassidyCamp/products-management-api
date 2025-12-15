@@ -11,5 +11,11 @@ app = FastAPI()
 app.include_router(category.router, prefix='/categories')
 app.include_router(product.router, prefix='/product')
 
-Base.metadata.drop_all(engine)
+
+# Base.metadata.drop_all(engine)
 Base.metadata.create_all(engine)
+
+
+# @app.get('/')
+# def home():
+#     return {"messege": "hello"}
