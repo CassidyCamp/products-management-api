@@ -17,7 +17,6 @@ class Products(Base):
     
     product_id = Column('id', Integer, primary_key=True)
     name = Column(String(length=200), nullable=False)
-    description = Column(Text)
     price = Column(Float, nullable=False)
     in_stock = Column(Boolean, default=True, server_default='true')
     category_id = Column(Integer, ForeignKey('categories.id', ondelete='CASCADE'))

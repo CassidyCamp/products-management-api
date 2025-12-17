@@ -8,8 +8,8 @@ from .routers import category, product
 app = FastAPI()
 
 
-app.include_router(category.router, prefix='/categories')
-app.include_router(product.router, prefix='/product')
+app.include_router(category.router, prefix='/api/categories')
+app.include_router(product.router, prefix='/api/products')
 
 
 # Base.metadata.drop_all(engine)
